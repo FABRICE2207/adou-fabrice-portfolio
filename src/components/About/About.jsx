@@ -17,7 +17,7 @@ const About = () => {
         </div>
         <div className='w-full' data-aos="fade-left" data-aos-delay="1000">
           <h1 className='text-gray-600 text-2xl'>Jeune passionnée et titurlaire d'un Brévet Technicien Supérieur (BTS) option Informatique Développeur d'Application. <br />
-          J'ai trois (3) années d'expérience et je mets mes compétences à votre service afin de résoudre vos problèmes en solution information efficace et fiable</h1>
+          J'ai trois (3) années d'expérience et je mets mes compétences à votre service afin de résoudre vos problèmes en solution informatique efficace et fiable</h1>
         </div>
       </div>
     </div>
