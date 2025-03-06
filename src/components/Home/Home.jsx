@@ -9,12 +9,12 @@ const Home = () => {
     style={{ backgroundImage: `url(${bgimage})` }}>
 
       {/* Texte au centre */}
-      <div className='flex flex-col justify-center items-center text-white'>
+      <div className='lg:h-[600px] flex flex-col justify-center items-center text-white'>
         <div data-aos="zoom-up" data-aos-delay="300" className='flex flex-col justify-center items-center'>
           <h1 className='text-[50px]'>Je suis</h1>
-          <h1 className='text-[50px] font-extrabold'>ADOU NIANGORAN FABRICE</h1>
+          <h1 className='text-[50px] font-extrabold text-center'>ADOU NIANGORAN FABRICE</h1>
         </div>
-        <h1 className='text-[30px]' data-aos="fade-up" data-aos-delay="700">Développeur Full-stack et Mobile</h1>
+        <h1 className='text-[30px] text-center' data-aos="fade-up" data-aos-delay="700">Développeur Full-stack et Mobile</h1>
       </div>
     </div>
   )

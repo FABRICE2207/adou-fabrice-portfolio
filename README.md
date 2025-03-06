@@ -16,3 +16,5 @@ If you are developing a production application, we recommend using TypeScript an
 - Tailwind css for the responsive site
 https://v3.tailwindcss.com/docs/guides/vite
 
+- Animation 
+npm i aos
