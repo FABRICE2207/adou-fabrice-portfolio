@@ -10,7 +10,7 @@ const Home = () => {
 
       {/* Texte au centre */}
       <div className='lg:h-[600px] flex flex-col justify-center items-center text-white'>
-        <div data-aos="zoom-up" data-aos-delay="300" className='flex flex-col justify-center items-center'>
+        <div data-aos="zoom-in-down" data-aos-delay="300" className='flex flex-col justify-center items-center'>
           <h1 className='text-[50px]'>Je suis</h1>
           <h1 className='text-[50px] font-extrabold text-center'>ADOU NIANGORAN FABRICE</h1>
         </div>

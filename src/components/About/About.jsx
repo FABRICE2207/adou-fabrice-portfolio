@@ -10,7 +10,7 @@ const About = () => {
         <div className='bg-[#090674] w-[100px] h-[6px]'></div>
       </div>
 
-      <div className='w-full flex lg:flex-row flex-col justify-between px-10 py-10 gap-5'>
+      <div className='w-full flex lg:flex-row flex-col justify-between items-center px-10 py-10 gap-5'>
         <div data-aos="fade-right" data-aos-delay="300">
           <img src={imageadou} alt="" className='w-full'/>
           <div className='bg-[#090674] w-full h-[10px]'></div>

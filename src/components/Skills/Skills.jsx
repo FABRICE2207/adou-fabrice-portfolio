@@ -3,8 +3,8 @@ import SkillsCard from './SkillsCard'
 
 const Skills = () => {
 
-  const skill1 = "w-4/12";
-  const skill2 = "w-5/12";
+  const skill1 = "w-5/12";
+  const skill2 = "w-9/12";
   const skill3 = "w-4/12";
   const skill4 = "w-4/12";
   const skill5 = "w-4/12";
@@ -19,7 +19,7 @@ const Skills = () => {
       <div className='flex lg:flex-row flex-col justify-between px-10 py-5 gap-5'>
           <div className='w-full'>
             <div data-aos="fade-up" data-aos-delay="700">
-              <SkillsCard title="React JS" width={skill1} val="40%"/>
+              <SkillsCard title="React JS" width={skill1} val="50%"/>
             </div>
             <div data-aos="fade-up" data-aos-delay="900">
               <SkillsCard title="React Native" width={skill3} val="40%"/>
@@ -30,7 +30,7 @@ const Skills = () => {
           </div>
           <div className='w-full'>
             <div data-aos="fade-up" data-aos-delay="800">
-              <SkillsCard title="Pyton (Flask)" width={skill2} val="55%" />
+              <SkillsCard title="Pyton (Flask)" width={skill2} val="70%" />
             </div>
             <div data-aos="fade-up" data-aos-delay="1000">
               <SkillsCard title="Figma" width={skill4} val="40%"/>
