@@ -14,31 +14,34 @@ const Services = () => {
 
       {/* Bloc des services */}
       <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
-        py-10 gap-5' data-aos="fade-up" data-aos-delay="300">
+        py-10 gap-5'>
 
           {/* Dévelloppement web */}
-        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2'>
+        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2'
+        data-aos="fade-up" data-aos-delay="400">
           <div className='flex flex-col justify-center items-center mt-12'>
             {/* Icon  */}
             <BiWorld className='size-14 text-[#090674]' />
-            <p className='font-semibold text-xl'>Dévelloppement web</p>
+            <p className='font-semibold text-xl'>Développement web</p>
             <div className='bg-[#090674] w-[50px] h-[2px] mt-3'></div>
             <p className='mt-5 text-gray-500 text-[15px] mx-5 text-center'>Application web - Site vitrine - 
               Site institutionnel - Blog - Boutique en ligne - E-commerce</p>
           </div>
         </div>
           {/* Dévellopement d’application Mobile */}
-        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2'>
+        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2'
+        data-aos="fade-up" data-aos-delay="600">
           <div className='flex flex-col justify-center items-center mt-12'>
             {/* Icon  */}
             <FiSmartphone className='size-14 text-[#090674]' />
-            <p className='font-semibold text-xl text-center'>Dévellopement d’application mobile</p>
+            <p className='font-semibold text-xl text-center'>Développement d’application mobile</p>
             <div className='bg-[#090674] w-[50px] h-[2px] mt-3'></div>
             <p className='mt-5 text-gray-500 text-[15px] mx-5 text-center'>Conception d’application mobile</p>
           </div>
         </div>
           {/* Infographie */}
-        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2'>
+        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2' 
+        data-aos="fade-up" data-aos-delay="800">
           <div className='flex flex-col justify-center items-center mt-12'>
             {/* Icon  */}
             <FaComputer className='size-14 text-[#090674]' />

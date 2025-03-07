@@ -3,7 +3,6 @@ import imageadou from '../../assets/image_adou.png'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 
 
-
 const About = () => {
   return (
     <div id='about' className='lg:w-full px-5 py-[40px] '>
@@ -27,12 +26,19 @@ const About = () => {
                 J'ai trois (3) années d'expérience et je mets mes compétences à votre service afin de résoudre vos problèmes en solution informatique efficace et fiable
               </p>
             </div>
+            {/* Les icons facebook et linkedLin */}
             <div className='flex flex-row mt-5 gap-5'>
               <div className='border-gray-500 rounded-full flex justify-center items-center hover:border-[#090674] border-2 w-12 h-12 text-white'>
-                <FaFacebook className='size-7 text-gray-500 hover:text-[#090674]'/>
+                {/* Lien facebook */}
+                <a href="https://www.facebook.com/profile.php?id=100093082975492" target="_blank">
+                  <FaFacebook className='size-7 text-gray-500 hover:text-[#090674]'/>
+                </a>
               </div>
               <div className='border-gray-500 rounded-full flex justify-center items-center hover:border-[#090674] border-2 w-12 h-12 text-white'>
-                <FaLinkedin className='size-7 text-gray-500 hover:text-[#090674]'/>
+                {/* Lien Linkedin */}
+                <a href="https://www.linkedin.com/in/niangoran-fabrice-adou/" target="_blank">
+                  <FaLinkedin className='size-7 text-gray-500 hover:text-[#090674]'/>
+                </a>
               </div>
             
             </div>
