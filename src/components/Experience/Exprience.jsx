@@ -8,8 +8,8 @@ const Exprience = () => {
         <div className='bg-[#090674] w-[100px] h-[6px]'></div>
       </div>
       
-       <div className='w-full flex lg:flex-row flex-col gap-10 px-10 py-10'>
-              <div className='w-full' data-aos="fade-right" data-aos-delay="300">
+       <div className='w-full flex lg:px-10 lg:flex-row md:w-full flex-col gap-10 py-10'>
+              <div className='w-full' data-aos="fade-up"  data-aos-delay="1200">
                 {/* Période 1 */}
                  <div className='flex flex-col gap-5 text-right'>
                     <h1 className="text-gray-600 text-xl font-bold">Novembre 2021 - Mai 2022</h1>
@@ -24,7 +24,7 @@ const Exprience = () => {
               {/* Trait du milieu */}
               <div className='bg-[#090674] w-2'></div>
 
-              <div className='w-full' data-aos="fade-left" data-aos-delay="1000">
+              <div className='w-full' data-aos="fade-up" data-aos-delay="1400">
                 <div className='w-full'>
                   {/* Mission 1 */}
                   <div className='flex flex-col gap-5'>
@@ -40,7 +40,7 @@ const Exprience = () => {
                   <div className='flex flex-col gap-5 mt-7'>
                       <h1 className="text-gray-600 text-xl font-bold">DJILX CI</h1>
                       <p className="text-gray-600 text-xl">
-                        - Maintenance des sites internet <br />
+                        - Maintenance des sites web <br />
                         - Conception des dashboard (Back Office) et api avec Python (Flask) <br />
                       </p>
                   </div>

@@ -16,7 +16,7 @@ const Skills = () => {
         <div className='bg-[#090674] w-[100px] h-[6px]'></div>
       </div>
 
-      <div className='flex lg:flex-row flex-col justify-between px-10 py-5 gap-5'>
+      <div className='flex lg:flex-row lg:px-10 md:w-full flex-col justify-between py-5 gap-5'>
           <div className='w-full'>
             <div data-aos="fade-up" data-aos-delay="700">
               <SkillsCard title="React JS" width={skill1} val="50%"/>

@@ -18,3 +18,6 @@ https://v3.tailwindcss.com/docs/guides/vite
 
 - Animation 
 npm i aos
+
+- Icons
+npm i react-icons
