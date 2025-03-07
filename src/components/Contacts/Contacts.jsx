@@ -1,9 +1,37 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import emailjs from '@emailjs/browser';
 import { FiSmartphone } from 'react-icons/fi'
 import { BiEnvelope } from 'react-icons/bi'
 import { MdPlace } from 'react-icons/md'
+import Swal from 'sweetalert2'
 
 const Contacts = () => {
+
+  // EmailJs
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    
+    emailjs
+      .sendForm('service_cf3di2v', 'template_xnaljmd', form.current, {
+        publicKey: 'I_0Q9W_cMjXVJD3ls',
+      })
+      .then(
+        () => {
+          Swal.fire({
+            title: "Succès",
+            text: "Votre message a été envoyé !",
+            icon: "success"
+      });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
   return (
     <div id="contacts" className='lg:w-full px-5 py-[40px]'>
       <div className='w-full flex lg:flex-col flex-col justify-center items-center'>
@@ -34,16 +62,18 @@ const Contacts = () => {
           </div>
         </div>
         <div className='flex flex-col gap-10 w-full'>
-          <form action="">
+          <form ref={form} onSubmit={sendEmail}>
             
-              <input type="text" placeholder='Nom et prenom complet' className="px-6 py-3 my-2 border-[1px] 
-            text-black rounded-lg w-full focus:outline-[#090674] focus:outline"/>
-              <input type="email" placeholder='Email' className="px-6 py-3 my-2 border-[1px] 
-            text-black rounded-lg w-full focus:outline-[#090674] focus:outline"/>
-              <textarea name="" id="" rows="4" placeholder='Message' className="px-6 py-3 my-2 border-[1px] 
-            text-black rounded-lg w-full focus:outline-[#090674] focus:outline"></textarea>
+              <input type="text" name='to_name' placeholder='Nom et prenom complet' className="px-6 py-3 my-2 border-[1px] 
+            text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
+
+              <input type="email" name='from_name' placeholder='Email' className="px-6 py-3 my-2 border-[1px] 
+            text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
+
+              <textarea name="message" id=""  rows="4" placeholder='Message' className="px-6 py-3 my-2 border-[1px] 
+            text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required ></textarea>
               
-                <button type='submit' className='w-full bg-[#090674] text-white py-3 rounded-lg
+                <button type="submit" className='w-full bg-[#090674] text-white py-3 rounded-lg
                 hover:bg-white uppercase font-semibold hover:text-[#090674] hover:outline-[#090674] hover:outline-none'>Envoyer </button>
               
           </form>

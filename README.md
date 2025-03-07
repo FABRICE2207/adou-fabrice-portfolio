@@ -21,3 +21,9 @@ npm i aos
 
 - Icons
 npm i react-icons
+
+- Envoie de mail
+https://www.emailjs.com/docs/examples/reactjs/
+
+- Notification message sweetAlert2
+https://sweetalert2.github.io/#download
