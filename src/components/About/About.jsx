@@ -3,6 +3,7 @@ import imageadou from '../../assets/image_adou.png'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 
 
+
 const About = () => {
   return (
     <div id='about' className='lg:w-full px-5 py-[40px] '>
