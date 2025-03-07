@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebook, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaLinkedin, FaArrowUp } from 'react-icons/fa'
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -21,6 +22,14 @@ const Footer = () => {
       </div>
       <div>
         <p className="text-white">2025 © Développé par Adou Fabrice.</p>
+      </div>
+
+      {/* scroll buton haut */}
+      <div id="icon-box" className='bg-white text-black p-3 rounded-full 
+      hover:[#090674] hover:text-[#090674] cursor-pointer fixed lg:bottom-6 right-6 bottom-6'>
+         <Link to='home' spy={true} offset={-100} smooth={true}>
+          <FaArrowUp className='size-6' />
+        </Link>
       </div>
     </div>
   );
