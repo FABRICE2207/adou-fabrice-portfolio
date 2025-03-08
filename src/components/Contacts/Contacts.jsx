@@ -19,13 +19,22 @@ const Contacts = () => {
       })
       .then(
         () => {
+          // Message de réussite alerte
           Swal.fire({
             title: "Succès",
             text: "Votre message a été envoyé !",
             icon: "success"
       });
+      // Suppression des champs du formulaire
+      form.current.reset();
         },
         (error) => {
+          // Message d'échec alerte
+          Swal.fire({
+            title: "Échec",
+            text: "Une erreur s'est produite. Veuillez réessayer.",
+            icon: "error"
+        });
           console.log('FAILED...', error.text);
         },
       );
@@ -41,31 +50,44 @@ const Contacts = () => {
       </div>
       <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between 
         py-10 gap-5'>
-        <div className='w-full py-5 flex flex-col gap-10'>
-          <div className='flex flex-row gap-5 justify-start items-start'>
+        <div className='w-[60%] md:w-full py-5 flex flex-col gap-10'>
+          <div className='flex flex-row gap-5 justify-start items-start lg:flex lg:flex-row lg:justify-start lg:items-start 
+          md:justify-center md:items-center md:flex md:flex-col
+           '>
             <div>
                <FiSmartphone className='size-10 text-[#090674]' />
             </div>
             <div className='text-gray-500 text-xl mt-1'>(+225) 0778037784</div>
           </div>
-          <div className='flex flex-row gap-5 justify-start items-start'>
+          <div className='flex flex-row gap-5 justify-start items-start lg:flex lg:flex-row lg:justify-start lg:items-start 
+          md:justify-center md:items-center md:flex md:flex-col'>
             <div>
               <BiEnvelope className='size-10 text-[#090674]' />
             </div>
             <div className='text-gray-500 text-xl mt-1'>adoufabio2207@gmail.com</div>
           </div>
-          <div className='flex flex-row gap-5 justify-start items-start'>
+          <div className='flex flex-row gap-5 justify-start items-start lg:flex lg:flex-row lg:justify-start lg:items-start 
+          md:justify-center md:items-center md:flex md:flex-col'>
             <div>
               <MdPlace className='size-10 text-[#090674]' />
             </div>
             <div className='text-gray-500 text-xl mt-2'>Côte d'Ivoire, Abidjan, Yopougon</div>
           </div>
         </div>
+
         <div className='flex flex-col gap-10 w-full'>
           <form ref={form} onSubmit={sendEmail}>
             
-              <input type="text" name='to_name' placeholder='Nom et prenom complet' className="px-6 py-3 my-2 border-[1px] 
-            text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
+              <div className='flex lg:flex-row flex-col gap-4'>
+                <div className='w-full'>
+                  <input type="text" name='to_name' placeholder='Nom et prenom complet' className="px-6 py-3 my-2 border-[1px] 
+                  text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
+                </div>
+                <div className='w-full'>
+                  <input type="text" name='to_name' placeholder='Contact WhatsApp' className="px-6 py-3 my-2 border-[1px] 
+                  text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
+                </div>
+              </div>
 
               <input type="email" name='from_name' placeholder='Email' className="px-6 py-3 my-2 border-[1px] 
             text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
