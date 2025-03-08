@@ -50,9 +50,9 @@ const Contacts = () => {
       </div>
       <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between 
         py-10 gap-5'>
-        <div className='w-[60%] md:w-full py-5 flex flex-col gap-10'>
+        <div className='w-[60%] md:w-full sm:w-full py-5 flex flex-col gap-10'>
           <div className='flex flex-row gap-5 justify-start items-start lg:flex lg:flex-row lg:justify-start lg:items-start 
-          md:justify-center md:items-center md:flex md:flex-col
+          md:justify-center md:items-center md:flex md:flex-col sm:w-full sm:justify-center sm:items-center sm:flex sm:flex-col
            '>
             <div>
                <FiSmartphone className='size-10 text-[#090674]' />
@@ -60,14 +60,14 @@ const Contacts = () => {
             <div className='text-gray-500 text-xl mt-1'>(+225) 0778037784</div>
           </div>
           <div className='flex flex-row gap-5 justify-start items-start lg:flex lg:flex-row lg:justify-start lg:items-start 
-          md:justify-center md:items-center md:flex md:flex-col'>
+          md:justify-center md:items-center md:flex md:flex-col sm:w-full sm:justify-center sm:items-center sm:flex sm:flex-col'>
             <div>
               <BiEnvelope className='size-10 text-[#090674]' />
             </div>
             <div className='text-gray-500 text-xl mt-1'>adoufabio2207@gmail.com</div>
           </div>
           <div className='flex flex-row gap-5 justify-start items-start lg:flex lg:flex-row lg:justify-start lg:items-start 
-          md:justify-center md:items-center md:flex md:flex-col'>
+          md:justify-center md:items-center md:flex md:flex-col sm:w-full sm:justify-center sm:items-center sm:flex sm:flex-col'>
             <div>
               <MdPlace className='size-10 text-[#090674]' />
             </div>
@@ -84,8 +84,8 @@ const Contacts = () => {
                   text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
                 </div>
                 <div className='w-full'>
-                  <input type="text" name='to_name' placeholder='Contact WhatsApp' className="px-6 py-3 my-2 border-[1px] 
-                  text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required />
+                  <input type="text" name='to_contact' placeholder='Contact WhatsApp' className="px-6 py-3 my-2 border-[1px] 
+                  text-black rounded-lg w-full focus:outline-[#090674] focus:outline" required maxLength={10}/>
                 </div>
               </div>
 
