@@ -1,59 +1,72 @@
 import React from 'react'
 import { BiWorld } from 'react-icons/bi'
-import { FiSmartphone } from 'react-icons/fi'
-import { FaComputer } from 'react-icons/fa6'
-
+import { FiSmartphone, FiMonitor } from 'react-icons/fi'
 
 const Services = () => {
   return (
-    <div id="services" className='bg-[#d6d6dbb6] lg:w-full py-10 px-10'>
-      <div className='w-full flex lg:flex-col flex-col justify-center items-center'>
-        <h2 className='font-bold text-[30px] uppercase'>mes services</h2>
-        <div className='bg-[#090674] w-[100px] h-[6px]'></div>
+    <div id="services" className="bg-white w-full px-5 lg:px-20 py-16">
+      {/* Titre */}
+      <div className="w-full flex flex-col justify-center items-center mb-12">
+        <h2 className="font-bold text-3xl lg:text-4xl uppercase text-gray-800">
+          Mes Services
+        </h2>
+        <div className="bg-[#090674] w-24 h-1.5 mt-4"></div>
       </div>
 
-      {/* Bloc des services */}
-      <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
-        py-10 gap-5'>
+      {/* Cartes de services */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        {/* Carte 1 */}
+        <div
+          className="bg-white shadow p-8 rounded-xl border border-gray-200 hover:border-[#090674] hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <BiWorld className="text-4xl text-[#090674] mb-4" />
+          <h3 className="font-semibold text-xl lg:text-2xl text-gray-800 mb-3">
+            Développement Web
+          </h3>
+          <div className="bg-[#090674] w-12 h-1 mb-5 rounded-full"></div>
+          <p className="text-gray-600 text-base lg:text-lg">
+            Application web - Site vitrine - Site institutionnel - Blog -
+            Boutique en ligne - E-commerce
+          </p>
+        </div>
 
-          {/* Dévelloppement web */}
-        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2'
-        data-aos="fade-up" data-aos-delay="400">
-          <div className='flex flex-col justify-center items-center mt-12'>
-            {/* Icon  */}
-            <BiWorld className='size-14 text-[#090674]' />
-            <p className='font-semibold text-xl'>Développement web</p>
-            <div className='bg-[#090674] w-[50px] h-[2px] mt-3'></div>
-            <p className='mt-5 text-gray-500 text-[15px] mx-5 text-center'>Application web - Site vitrine - 
-              Site institutionnel - Blog - Boutique en ligne - E-commerce</p>
-          </div>
+        {/* Carte 2 */}
+        <div
+          className="bg-white shadow p-8 rounded-xl border border-gray-200 hover:border-[#090674] hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <FiSmartphone className="text-4xl text-[#090674] mb-4" />
+          <h3 className="font-semibold text-xl lg:text-2xl text-gray-800 mb-3">
+            Applications Mobiles
+          </h3>
+          <div className="bg-[#090674] w-12 h-1 mb-5 rounded-full"></div>
+          <p className="text-gray-600 text-base lg:text-lg">
+            Conception d'applications mobiles cross-platform (iOS & Android)
+            avec React Native.
+          </p>
         </div>
-          {/* Dévellopement d’application Mobile */}
-        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2'
-        data-aos="fade-up" data-aos-delay="600">
-          <div className='flex flex-col justify-center items-center mt-12'>
-            {/* Icon  */}
-            <FiSmartphone className='size-14 text-[#090674]' />
-            <p className='font-semibold text-xl text-center'>Développement d’application mobile</p>
-            <div className='bg-[#090674] w-[50px] h-[2px] mt-3'></div>
-            <p className='mt-5 text-gray-500 text-[15px] mx-5 text-center'>Conception d’application mobile</p>
-          </div>
+
+        {/* Carte 3 */}
+        <div
+          className="bg-white shadow p-8 rounded-xl border border-gray-200 hover:border-[#090674] hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center"
+          data-aos="fade-up"
+          data-aos-delay="800"
+        >
+          <FiMonitor className="text-4xl text-[#090674] mb-4" />
+          <h3 className="font-semibold text-xl lg:text-2xl text-gray-800 mb-3">
+            Infographie
+          </h3>
+          <div className="bg-[#090674] w-12 h-1 mb-5 rounded-full"></div>
+          <p className="text-gray-600 text-base lg:text-lg">
+            Création d'affiches, logos, bannières et supports visuels.
+          </p>
         </div>
-          {/* Infographie */}
-        <div className='bg-white w-full h-72 rounded-xl hover:border-[#090674] hover:border-2' 
-        data-aos="fade-up" data-aos-delay="800">
-          <div className='flex flex-col justify-center items-center mt-12'>
-            {/* Icon  */}
-            <FaComputer className='size-14 text-[#090674]' />
-            <p className='font-semibold text-xl'>Infographie</p>
-            <div className='bg-[#090674] w-[50px] h-[2px] mt-3'></div>
-            <p className='mt-5 text-gray-500 text-[15px] mx-5 text-center'>Conception d’affiche</p>
-          </div>
-        </div>
-        
       </div>
     </div>
-  )
+  );
 }
 
 export default Services

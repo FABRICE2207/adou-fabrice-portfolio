@@ -9,6 +9,7 @@ import Exprience from './components/Experience/Exprience';
 import Services from './components/Services/Services';
 import Footer from './components/Footer/Footer';
 import Contacts from './components/Contacts/Contacts';
+import Projects from './components/Projects/Projects';
 
 const App = () => {
 
@@ -29,8 +30,9 @@ const App = () => {
       <Header />
       <Home />
       <About />
-      <Skills />
       <Exprience />
+      <Projects />
+      <Skills />
       <Services />
       <Contacts />
       <Footer />

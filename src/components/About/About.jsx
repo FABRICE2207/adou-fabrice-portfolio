@@ -1,52 +1,59 @@
-import React from 'react'
-import imageadou from '../../assets/image_adou.png'
-import { FaFacebook, FaLinkedin } from 'react-icons/fa'
-
+import React from 'react';
+import imageadou from '../../assets/image_adou.png';
+import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <div id='about' className='lg:w-full px-5 py-[40px] '>
-      <div className='w-full flex lg:flex-col flex-col justify-center items-center'>
-        <h2 className='font-bold text-[30px]'>A PROPOS DE MOI</h2>
-        <div className='bg-[#090674] w-[100px] h-[6px]'></div>
+    <div id='about' className='w-full px-5 py-16 bg-white'>
+      {/* Titre section */}
+      <div className='text-center mb-12'>
+        <h2 className='text-3xl font-bold text-gray-800'>À propos de moi</h2>
+        <div className='mx-auto mt-2 h-1 w-24 bg-[#090674] rounded'></div>
       </div>
 
-        <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
-        py-10 gap-5'>
-          <div className='w-full'>
-            <img src={imageadou} alt="" />
-            <div className='bg-[#090674] w-full h-[10px]'></div>
-          </div>
-          <div className='w-full'>
-            <div>
-              <p className='text-gray-600 text-xl mt-4'>
-                Jeune passionnée et titurlaire d'un Brévet Technicien Supérieur (BTS) option Informatique Développeur d'Application.
-              </p>
-              <p className='text-gray-600 text-xl mt-4'>
-                J'ai trois (3) années d'expérience et je mets mes compétences à votre service afin de résoudre vos problèmes en solution informatique efficace et fiable
-              </p>
-            </div>
-            {/* Les icons facebook et linkedLin */}
-            <div className='flex flex-row mt-5 gap-5'>
-              <div className='border-gray-500 rounded-full flex justify-center items-center hover:border-[#090674] border-2 w-12 h-12 text-white'>
-                {/* Lien facebook */}
-                <a href="https://www.facebook.com/profile.php?id=100093082975492" target="_blank">
-                  <FaFacebook className='size-7 text-gray-500 hover:text-[#090674]'/>
-                </a>
-              </div>
-              <div className='border-gray-500 rounded-full flex justify-center items-center hover:border-[#090674] border-2 w-12 h-12 text-white'>
-                {/* Lien Linkedin */}
-                <a href="https://www.linkedin.com/in/niangoran-fabrice-adou/" target="_blank">
-                  <FaLinkedin className='size-7 text-gray-500 hover:text-[#090674]'/>
-                </a>
-              </div>
-            
-            </div>
-          </div>
+      {/* Contenu principal */}
+      <div className='flex flex-col lg:flex-row items-center justify-center gap-10 lg:px-32'>
+        {/* Image profil */}
+        <div className='relative w-[280px] h-[280px] rounded-full overflow-hidden shadow-xl border-4 border-[#090674]'>
+          <img
+            src={imageadou}
+            alt="Adou Fabrice"
+            className='object-cover w-full h-full'
+          />
         </div>
 
-    </div>
-  )
-}
+        {/* Texte descriptif */}
+        <div className='max-w-xl text-center lg:text-left'>
+          <p className='text-gray-700 text-lg'>
+            Jeune passionné et titulaire d'un <strong>Brevet de Technicien Supérieur</strong> (BTS) en Informatique Développeur d'Applications à l'Institut Supérieur Jean Paul 2 de Yopougon (Groupe Loko).
+          </p>
+          <p className='text-gray-700 text-lg mt-4'>
+            Avec <strong>3 ans d'expérience</strong>, je vous accompagne dans la conception de solutions web et mobiles efficaces, fiables et adaptées à vos besoins.
+          </p>
 
-export default About
+          {/* Icônes réseaux sociaux */}
+          <div className='flex justify-center lg:justify-start gap-4 mt-6'>
+            <a
+              href="https://www.facebook.com/profile.php?id=100093082975492"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-11 h-11 border-2 border-gray-400 rounded-full flex items-center justify-center hover:border-[#090674] transition"
+            >
+              <FaFacebook className="text-gray-500 group-hover:text-[#090674] text-xl" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/niangoran-fabrice-adou/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-11 h-11 border-2 border-gray-400 rounded-full flex items-center justify-center hover:border-[#090674] transition"
+            >
+              <FaLinkedin className="text-gray-500 group-hover:text-[#090674] text-xl" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;

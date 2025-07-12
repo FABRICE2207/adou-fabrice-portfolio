@@ -1,88 +1,90 @@
-import React ,{ useState } from 'react'
-import { FaXmark, FaBars,  FaArrowUp } from 'react-icons/fa6'
-import { Link } from 'react-scroll'
+import React, { useState, useEffect } from 'react';
+import { FaXmark, FaBars } from 'react-icons/fa6';
+import { Link } from 'react-scroll';
 
 const Header = () => {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Clique sur la barre du menue pour ouvrier
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  // Pour fermer le menu
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  }
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
-  // Le menu = les onglets
   const navItems = [
-    {
-      link: 'Home', path: 'home'
-    },
-    {
-      link: 'A propos', path: 'about'
-    },
-    {
-      link: 'Competences', path: 'skills'
-    },
-    {
-      link: 'Experience', path: 'experience'
-    },
-    {
-      link: 'Services', path: 'services'
-    },
-    {
-      link: 'Contact', path: 'contacts'
-    }
-  ]
+    { link: 'Accueil', path: 'home' },
+    { link: 'Expériences', path: 'experience' },
+    { link: 'Projets', path: 'projects' },
+    { link: 'Compétences', path: 'skills' },
+    { link: 'Services', path: 'services' },
+    { link: 'Contact', path: 'contacts' }
+  ];
 
   return (
-    <nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16
-    px-6 py-4 sticky top-0 z-50'>
-      {/* NOM ENTREPRISE */}
-      <h1 className='text-[#090674] font-bold md:text-4xl text-3xl font-rubik'> ADOU FABRICE
-      </h1>
+    <nav className={`w-full flex justify-between items-center gap-1 lg:px-16 px-6 py-4 sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#090674] text-white shadow-md' : 'bg-white text-[#090674]'}`}>
+      {/* Logo/Nom */}
+      <Link 
+        to="home" 
+        spy={true} 
+        smooth={true} 
+        className={`font-bold md:text-4xl text-3xl font-rubik cursor-pointer hover:opacity-80 transition-opacity ${isScrolled ? 'text-white' : 'text-[#090674]'}`}
+      >
+        ADOU FABRICE
+      </Link>
 
-      {/* Menu */}
+      {/* Menu Desktop */}
       <ul className='lg:flex justify-center items-center gap-6 hidden'>
-        {
-          navItems.map(( {link, path} ) => (
-            <Link key={path} className='text-black uppercase font-semibold cursor-pointer p-1
-               hover:border-[#090674] hover:border-b-4 hover:text-black text-[15px]' to={path}
-               spy={true} offset={-100} smooth={true}>{link}</Link>
-          ))
-        }
+        {navItems.map(({link, path}) => (
+          <Link 
+            key={path} 
+            className={`uppercase font-semibold cursor-pointer p-1 transition-colors duration-200 relative group ${isScrolled ? 'text-gray-200 hover:text-white' : 'text-[#090674] hover:text-[#090674]'}`}
+            to={path}
+            spy={true} 
+            offset={-100} 
+            smooth={true}
+            activeClass={isScrolled ? 'text-white font-bold' : 'text-[#090674] font-bold'}
+          >
+            {link}
+            <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-white' : 'bg-[#090674]'}`}></span>
+          </Link>
+        ))}
       </ul>
 
-      {/* debut du menu ici */}
-      <div className='flex justify-betwenn items-center lg:hidden mt-3' onClick={toggleMenu}>
-        <div>
-          {
-            // Si le menu est ouvert, affiche Icon FaXmark sinon FarBars
-            isMenuOpen ? <FaXmark className='text-[#090674] text-3xl cursor-pointer'/>
-            : <FaBars className='text-[#090674] text-3xl cursor-pointer'/>
-          }
-        </div>
+      {/* Bouton Menu Mobile */}
+      <div className='lg:hidden' onClick={toggleMenu}>
+        {isMenuOpen ? (
+          <FaXmark className={`text-3xl cursor-pointer transition-transform hover:rotate-90 duration-300 ${isScrolled ? 'text-white' : 'text-[#090674]'}`}/>
+        ) : (
+          <FaBars className={`text-3xl cursor-pointer transition-transform hover:rotate-180 duration-300 ${isScrolled ? 'text-white' : 'text-[#090674]'}`}/>
+        )}
       </div>
       
-      {/* affiche du menu format telephone */}
-      <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-white 
-      p-4 absolute top-[70px] left-0`} onClick={closeMenu}>
-          <ul className='flex flex-col justify-center items-center gap-2 w-full'>
-          {
-          navItems.map(( {link, path} ) => (
-            <Link key={path} className='text-[#090674] uppercase font-semibold cursor-pointer p-2
-              rounded-lg  hover:text-[#090674] w-full text-center' to={path}
-               spy={true} offset={-100} smooth={true}>{link}</Link>
-          ))
-        }
-          </ul>
+      {/* Menu Mobile */}
+      <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full ${isScrolled ? 'bg-[#090674]' : 'bg-white'} p-4 absolute top-full left-0 shadow-lg animate-fadeIn`}>
+        <ul className='flex flex-col justify-center items-center gap-3 w-full'>
+          {navItems.map(({link, path}) => (
+            <Link 
+              key={path} 
+              className={`uppercase font-semibold cursor-pointer p-3 rounded-lg w-full text-center transition-colors duration-200 ${isScrolled ? 'text-white hover:bg-white hover:text-[#090674]' : 'text-[#090674] hover:bg-[#090674] hover:text-white'}`}
+              to={path}
+              spy={true} 
+              offset={-100} 
+              smooth={true}
+              onClick={closeMenu}
+            >
+              {link}
+            </Link>
+          ))}
+        </ul>
       </div>
-
     </nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

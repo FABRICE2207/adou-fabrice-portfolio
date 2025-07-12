@@ -1,23 +1,38 @@
-import React from 'react'
-import bgimage from '../../assets/bgimage.png'
+import React from 'react';
+import bgimage from '../../assets/bgimage.png';
 
 const Home = () => {
   return (
-    // Image arriere plan
-    <div id='home' className='bg-[#090674] lg:h-[600px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[150px]
-    px-[20px] flex justify-center items-center bg-cover bg-center'
-    style={{ backgroundImage: `url(${bgimage})` }}>
+    <div
+      id="home"
+      className="relative bg-cover bg-center bg-no-repeat h-[100vh] flex items-center justify-center px-6 text-white"
+      style={{ backgroundImage: `url(${bgimage})` }}
+    >
+      {/* Overlay sombre */}
+      <div className="absolute inset-0 bg-[#0a0674a6] opacity-60 z-0"></div>
 
-      {/* Texte au centre */}
-      <div className='lg:h-[600px] flex flex-col justify-center items-center text-white'>
-        <div data-aos="zoom-in-down" data-aos-delay="300" className='flex flex-col justify-center items-center'>
-          <h1 className='text-[50px]'>Je suis</h1>
-          <h1 className='text-[50px] font-extrabold text-center'>ADOU NIANGORAN FABRICE</h1>
-        </div>
-        <h1 className='text-[30px] text-center' data-aos="fade-up" data-aos-delay="700">Développeur Full-stack et Mobile</h1>
+      {/* Contenu central */}
+      <div
+        className="relative z-10 text-center space-y-5 max-w-3xl"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-light">Je suis</h1>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+          ADOU NIANGORAN FABRICE
+        </h2>
+        <p
+          className="text-lg sm:text-xl text-gray-200"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          Développeur Full-stack 
+        </p>
+
+        
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

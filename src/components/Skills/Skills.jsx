@@ -1,45 +1,69 @@
-import React from 'react'
-import SkillsCard from './SkillsCard'
+import React from 'react';
+import Marquee from 'react-fast-marquee';
+import {
+  FaReact,
+  FaFigma,
+} from 'react-icons/fa';
+import { SiAdobephotoshop, SiNextdotjs } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { SiFlask } from 'react-icons/si';
+
+const skills = [
+  {
+    name: "NEXT JS",
+    icon: <SiNextdotjs className="text-black" />,
+  },
+  {
+    name: "React JS",
+    icon: <FaReact className="text-sky-500" />,
+  },
+  {
+    name: "React Native",
+    icon: <FaReact className="text-blue-400" />,
+  },
+  {
+    name: "Python / Flask",
+    icon: <SiFlask className="text-black" />,
+  },
+  {
+    name: "Github",
+    icon: <FaGithub className="text-black" />,
+  },
+  {
+    name: "Figma",
+    icon: <FaFigma className="text-pink-500" />,
+  },
+  {
+    name: "Photoshop",
+    icon: <SiAdobephotoshop className="text-blue-900" />,
+  },
+];
 
 const Skills = () => {
-
-  const skill1 = "w-5/12";
-  const skill2 = "w-9/12";
-  const skill3 = "w-4/12";
-  const skill4 = "w-4/12";
-  const skill5 = "w-4/12";
-
   return (
-    <div id="skills" className='bg-[#d6d6dbb6] py-10 px-10'>
-      <div className='w-full flex lg:flex-col flex-col justify-center items-center'>
-        <h2 className='font-bold text-[30px] uppercase'>compétence</h2>
-        <div className='bg-[#090674] w-[100px] h-[6px]'></div>
+    <div id="skills" className="bg-[#f7f7f7ab] py-14 px-5">
+      {/* Titre */}
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold uppercase text-gray-800">Compétences</h2>
+        <div className="mt-2 h-1 w-24 bg-[#090674] mx-auto rounded"></div>
       </div>
 
-      <div className='flex lg:flex-row lg:px-10 md:w-full flex-col justify-between py-5 gap-5'>
-          <div className='w-full'>
-            <div data-aos="fade-up" data-aos-delay="700">
-              <SkillsCard title="React JS" width={skill1} val="50%"/>
+      {/* Marquee */}
+      <Marquee gradient={false} speed={50}>
+        <div className="flex gap-10 items-center p-2">
+          {skills.map((skill, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center justify-center bg-white rounded-xl shadow-md p-6 w-[140px]  transition"
+            >
+              <div className="text-4xl mb-2">{skill.icon}</div>
+              <p className="text-sm font-semibold text-gray-700 text-center">{skill.name}</p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="900">
-              <SkillsCard title="React Native" width={skill3} val="40%"/>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="1100">
-              <SkillsCard title="Photoshop" width={skill5} val="40%"/>
-            </div>
-          </div>
-          <div className='w-full'>
-            <div data-aos="fade-up" data-aos-delay="800">
-              <SkillsCard title="Pyton (Flask)" width={skill2} val="70%" />
-            </div>
-            <div data-aos="fade-up" data-aos-delay="1000">
-              <SkillsCard title="Figma" width={skill4} val="40%"/>
-            </div>
-          </div>
-
-      </div>
+          ))}
+        </div>
+      </Marquee>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
