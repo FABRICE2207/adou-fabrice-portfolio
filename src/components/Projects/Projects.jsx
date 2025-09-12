@@ -1,5 +1,9 @@
 import React from 'react'
-import imageProject1 from '../../assets/1.png'
+import imageProject1 from '../../assets/1.png';
+import imageProject2 from '../../assets/2.jpg';
+import imageProject3 from '../../assets/3.png';
+import imageProject4 from '../../assets/4.png';
+import imageProject5 from '../../assets/5.png';
 import { BsEyeFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 
@@ -33,15 +37,15 @@ const Projects = () => {
           {/* Projet 2 */}
          <div
             className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
-            style={{ backgroundImage: `url(${imageProject1})` }}
+            style={{ backgroundImage: `url(${imageProject2})` }}
           >
             {/* Superposition noire visible au survol */}
-            <a href="https://sanitas-plus.vercel.app/">
+            <a href="https://www.qr.jilx.ci/">
               <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
               {/* <Link to="" className="text-white text-lg"> */}
                 <div className="text-white flex flex-col justify-center items-center">
                   <BsEyeFill size={30} />
-                  <p>Voir le site de SANITAS-PLUS</p>
+                  <p>Voir la plateforme de QrProd</p>
                 </div>
               </div>
             </a>
@@ -49,15 +53,47 @@ const Projects = () => {
           {/* Projet 3 */}
           <div
             className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
-            style={{ backgroundImage: `url(${imageProject1})` }}
+            style={{ backgroundImage: `url(${imageProject3})` }}
           >
             {/* Superposition noire visible au survol */}
-            <a href="https://sanitas-plus.vercel.app/">
+            <a href="https://site-web-le-campeur.vercel.app/">
               <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
               {/* <Link to="" className="text-white text-lg"> */}
                 <div className="text-white flex flex-col justify-center items-center">
                   <BsEyeFill size={30} />
-                  <p>Voir le site de SANITAS-PLUS</p>
+                  <p>Voir le site du CAMPEUR</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          {/* Projet 4 */}
+          <div
+            className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
+            style={{ backgroundImage: `url(${imageProject4})` }}
+          >
+            {/* Superposition noire visible au survol */}
+            <a href="https://siteweb-adca-construction.vercel.app/">
+              <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
+              {/* <Link to="" className="text-white text-lg"> */}
+                <div className="text-white flex flex-col justify-center items-center">
+                  <BsEyeFill size={30} />
+                  <p>Voir le site de l'ADCA</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          {/* Projet 5 */}
+          <div
+            className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
+            style={{ backgroundImage: `url(${imageProject5})` }}
+          >
+            {/* Superposition noire visible au survol */}
+            <a href="https://ridissi.vercel.app/">
+              <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
+              {/* <Link to="" className="text-white text-lg"> */}
+                <div className="text-white flex flex-col justify-center items-center">
+                  <BsEyeFill size={30} />
+                  <p>Voir le site de RIDISSI</p>
                 </div>
               </div>
             </a>
