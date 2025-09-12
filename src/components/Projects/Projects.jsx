@@ -9,6 +9,39 @@ import { Link } from 'react-router-dom';
 
 const Projects = () => {
 
+  const projects = [
+  {
+    id: 1,
+    image: imageProject1,
+    link: "https://sanitas-plus.vercel.app/",
+    title: "Voir le site de SANITAS-PLUS",
+  },
+  {
+    id: 2,
+    image: imageProject2,
+    link: "https://www.qr.jilx.ci/",
+    title: "Voir la plateforme de QrProd",
+  },
+  {
+    id: 3,
+    image: imageProject3,
+    link: "https://site-web-le-campeur.vercel.app/",
+    title: "Voir le site du CAMPEUR",
+  },
+  {
+    id: 4,
+    image: imageProject4,
+    link: "https://siteweb-adca-construction.vercel.app/",
+    title: "Voir le site de l'ADCA",
+  },
+  {
+    id: 5,
+    image: imageProject5,
+    link: "https://ridissi.vercel.app/",
+    title: "Voir le site de RIDISSI",
+  },
+];
+
   return (
     <div id="projects" className='bg-white lg:w-full pb-10'>
       <div className='w-full flex lg:flex-col flex-col justify-center items-center'>
@@ -16,91 +49,26 @@ const Projects = () => {
         <div className='bg-[#090674] w-[100px] h-[6px]'></div>
       </div>
 
-      <div className='pt-10'>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10">
-          {/* Projet 1 */}
+      <div className="pt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10">
+        {projects.map((project, id) => (
           <div
-            className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
-            style={{ backgroundImage: `url(${imageProject1})` }}
+            key={id}
+            className="relative p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
+            style={{ backgroundImage: `url(${project.image})` }}
           >
-            {/* Superposition noire visible au survol */}
-            <a href="https://sanitas-plus.vercel.app/">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
               <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
-              {/* <Link to="" className="text-white text-lg"> */}
                 <div className="text-white flex flex-col justify-center items-center">
                   <BsEyeFill size={30} />
-                  <p>Voir le site de SANITAS-PLUS</p>
+                  <p>{project.title}</p>
                 </div>
               </div>
             </a>
           </div>
-          {/* Projet 2 */}
-         <div
-            className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
-            style={{ backgroundImage: `url(${imageProject2})` }}
-          >
-            {/* Superposition noire visible au survol */}
-            <a href="https://www.qr.jilx.ci/">
-              <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
-              {/* <Link to="" className="text-white text-lg"> */}
-                <div className="text-white flex flex-col justify-center items-center">
-                  <BsEyeFill size={30} />
-                  <p>Voir la plateforme de QrProd</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          {/* Projet 3 */}
-          <div
-            className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
-            style={{ backgroundImage: `url(${imageProject3})` }}
-          >
-            {/* Superposition noire visible au survol */}
-            <a href="https://site-web-le-campeur.vercel.app/">
-              <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
-              {/* <Link to="" className="text-white text-lg"> */}
-                <div className="text-white flex flex-col justify-center items-center">
-                  <BsEyeFill size={30} />
-                  <p>Voir le site du CAMPEUR</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          {/* Projet 4 */}
-          <div
-            className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
-            style={{ backgroundImage: `url(${imageProject4})` }}
-          >
-            {/* Superposition noire visible au survol */}
-            <a href="https://siteweb-adca-construction.vercel.app/">
-              <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
-              {/* <Link to="" className="text-white text-lg"> */}
-                <div className="text-white flex flex-col justify-center items-center">
-                  <BsEyeFill size={30} />
-                  <p>Voir le site de l'ADCA</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          {/* Projet 5 */}
-          <div
-            className="p-4 bg-white lg:h-[210px] h-[50vh] bg-cover bg-center shadow-md rounded-lg transform transition-transform duration-300 hover:scale-105"
-            style={{ backgroundImage: `url(${imageProject5})` }}
-          >
-            {/* Superposition noire visible au survol */}
-            <a href="https://ridissi.vercel.app/">
-              <div className="absolute inset-0 bg-[#090674] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg cursor-pointer">
-              {/* <Link to="" className="text-white text-lg"> */}
-                <div className="text-white flex flex-col justify-center items-center">
-                  <BsEyeFill size={30} />
-                  <p>Voir le site de RIDISSI</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          {/* Ajoutez d'autres projets ici si nécessaire */}
-        </div>
+        ))}
       </div>
+    </div>
     </div>
   )
 }
