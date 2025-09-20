@@ -1,8 +1,20 @@
 import React from 'react';
 import imageadou from '../../assets/image_adou.png';
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaDownload, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const About = () => {
+
+  const handleDownloadCV = () => {
+    // Remplacez ce lien par le lien vers votre CV
+    const cvUrl = '/path-to-your-cv.pdf';
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'CV_ADOU_FABRICE.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div id='about' className='w-full px-5 py-16 bg-white'>
       {/* Titre section */}
@@ -49,6 +61,17 @@ const About = () => {
             >
               <FaLinkedin className="text-gray-500 group-hover:text-[#090674] text-xl" />
             </a>
+          </div>
+
+          {/* Bouton télécharger CV */}
+          <div className='flex justify-center lg:justify-start mt-8'>
+            <button
+              onClick={handleDownloadCV}
+              className="group bg-[#090674] hover:bg-[#0a0856] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              <FaDownload className="w-5 h-5 group-hover:animate-bounce" />
+              <span>Télécharger mon CV</span>
+            </button>
           </div>
         </div>
       </div>

@@ -10,32 +10,32 @@ import { Link } from 'react-router-dom';
 const Projects = () => {
 
   const projects = [
+  // {
+  //   id: 1,
+  //   image: imageProject1,
+  //   link: "https://sanitas-plus.vercel.app/",
+  //   title: "Voir le site de SANITAS-PLUS",
+  // },
   {
     id: 1,
-    image: imageProject1,
-    link: "https://sanitas-plus.vercel.app/",
-    title: "Voir le site de SANITAS-PLUS",
-  },
-  {
-    id: 2,
     image: imageProject2,
     link: "https://www.qr.jilx.ci/",
     title: "Voir la plateforme de QrProd",
   },
   {
-    id: 3,
+    id: 2,
     image: imageProject3,
     link: "https://site-web-le-campeur.vercel.app/",
     title: "Voir le site du CAMPEUR",
   },
   {
-    id: 4,
+    id: 3,
     image: imageProject4,
     link: "https://siteweb-adca-construction.vercel.app/",
     title: "Voir le site de l'ADCA",
   },
   {
-    id: 5,
+    id: 4,
     image: imageProject5,
     link: "https://ridissi.vercel.app/",
     title: "Voir le site de RIDISSI",
