@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className="text-white">2025 © Développé par Adou Fabrice.</p>
+        <p className="text-white">2025 © Développé par Adou Fabrice - Dévelppeur Full-Stack.</p>
       </div>
 
       {/* scroll buton haut */}

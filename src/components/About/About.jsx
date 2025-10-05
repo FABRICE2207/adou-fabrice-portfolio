@@ -9,7 +9,7 @@ const About = () => {
     const cvUrl = '/path-to-your-cv.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'CV_ADOU_FABRICE.pdf';
+    link.download = '/CV_ADOU_FABRICE.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
