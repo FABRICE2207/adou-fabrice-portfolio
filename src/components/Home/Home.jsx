@@ -21,12 +21,13 @@ const Home = () => {
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
           ADOU NIANGORAN FABRICE
         </h2>
+        
         <p
           className="text-lg sm:text-xl text-gray-200"
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          Développeur Full-stack 
+          Développeur Full-stack et Designer UX/UI
         </p>
 
         
