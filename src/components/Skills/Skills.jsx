@@ -4,7 +4,7 @@ import {
   FaReact,
   FaFigma,
 } from 'react-icons/fa';
-import { SiAdobephotoshop, SiNextdotjs } from "react-icons/si";
+import { SiAdobephotoshop, SiFastapi, SiNextdotjs } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiFlask } from 'react-icons/si';
 
@@ -24,6 +24,10 @@ const skills = [
   {
     name: "Python / Flask",
     icon: <SiFlask className="text-black" />,
+  },
+  {
+    name: "FastApi",
+    icon: <SiFastapi className="text-black" />,
   },
   {
     name: "Github",

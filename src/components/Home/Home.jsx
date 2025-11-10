@@ -27,7 +27,7 @@ const Home = () => {
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          Développeur Full-stack et Designer UX/UI
+          Développeur Full-stack
         </p>
 
         
