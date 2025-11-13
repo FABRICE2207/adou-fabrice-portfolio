@@ -40,7 +40,7 @@ const Projects = () => {
       image: imageProject5,
       link: "https://ridissi.vercel.app/",
       title: "Voir le site de RIDISSI",
-      category: "site",
+      category: "application",
     },
     {
       id: 5,
@@ -121,7 +121,7 @@ const Projects = () => {
         <button
           onClick={() => setFilter("design")}
           className={`px-5 py-2 rounded-full text-sm font-semibold transition ${
-            filter === "site"
+            filter === "design"
               ? "bg-[#090674] text-white"
               : "bg-gray-200 hover:bg-gray-300"
           }`}
