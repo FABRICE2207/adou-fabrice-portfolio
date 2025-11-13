@@ -5,6 +5,7 @@ import imageProject3 from "../../assets/3.png";
 import imageProject4 from "../../assets/4.png";
 import imageProject5 from "../../assets/5.png";
 import imageProject6 from "../../assets/6.png";
+import imageProject7 from "../../assets/7.png";
 import imageDesign1 from "../../assets/design_1.png";
 import imageDesign2 from "../../assets/design_2.png";
 import { BsEyeFill } from "react-icons/bs";
@@ -61,6 +62,13 @@ const Projects = () => {
       link: "https://www.figma.com/proto/TWUjKiRod26S0BLmgmUoJf/Marquette_site_web_e-commerce-YKPARF?node-id=0-1&p=f&t=0xZtDqnY9PlbRHSH-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=35%3A2",
       title: "Voir le design",
       category: "design",
+    },
+    {
+      id: 8,
+      image: imageProject7,
+      link: "https://ak-construction-service.vercel.app/",
+      title: "Voir le site",
+      category: "site",
     },
   ];
 
