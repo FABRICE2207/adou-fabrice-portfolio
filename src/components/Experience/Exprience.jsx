@@ -6,9 +6,9 @@ const experiences = [
     title: "Développeur Full-Stack et Mobile",
     company: "DJILX CI",
     missions: [
-      "Maintenance des sites web",
+      "Développement d’API REST sécurisées avec Flask et authentification JWT",
       "Conception des dashboards (Back Office)",
-      "Développement d'APIs avec Python (Flask)"
+      "Création et déploiement d’applications web modernes avec React.js et Next.js"
     ],
   },
   {
